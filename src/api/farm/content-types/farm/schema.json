@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farms",
+  "info": {
+    "singularName": "farm",
+    "pluralName": "farms",
+    "displayName": "Farm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "farms"
+    }
+  }
+}
