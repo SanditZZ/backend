@@ -829,6 +829,7 @@ export interface ApiFarmFarm extends Schema.CollectionType {
     singularName: 'farm';
     pluralName: 'farms';
     displayName: 'Farm';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -843,6 +844,10 @@ export interface ApiFarmFarm extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
+    description: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1000;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "farm",
     "pluralName": "farms",
-    "displayName": "Farm"
+    "displayName": "Farm",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "farms"
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1000
     }
   }
 }
